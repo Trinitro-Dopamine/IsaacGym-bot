@@ -1,0 +1,13 @@
+  <joint
+    name="StartTag-EndTagJoint"
+    type="fixed">
+    <origin
+      xyz="Xvalue Yvalue Zvalue"
+      rpy="ROvalue PIvalue YAvalue" />
+    <parent
+      link="StartTagYBody" />
+    <child
+      link="EndTagXBody" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
