@@ -1,0 +1,18 @@
+//
+number_of_ubot number_of_joint  (number_of_joint=number_of_ubot-1 for no loop graph)
+for next number_of_joint line :
+start_tag start_face end_tag end_face raotation 
+
+//rotation direction is start_face based , clockwise increasing,
+// 00 mean face to face ,fully reclosing
+
+1 0
+
+//this mean 2
+2 1
+0 yy 1 xy 00
+
+4 3
+0 01 1 10 10
+1 11 2 11 01
+0 00 3 10 11

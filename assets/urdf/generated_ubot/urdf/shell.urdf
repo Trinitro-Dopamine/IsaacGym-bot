@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="shell">
+  <link
+    name="0XBody">
+    <inertial>
+      <origin
+        xyz="-0.0019165 -0.020284 -1.5446E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.069744" />
+      <inertia
+        ixx="8.68E-05"
+        ixy="-2.3313E-05"
+        ixz="-3.6916E-12"
+        iyy="8.6964E-05"
+        iyz="2.5395E-11"
+        izz="8.7186E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/0XBody.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/0XBody.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="0CenterBody">
+    <inertial>
+      <origin
+        xyz="-0.0022809 -0.0021962 1.0803E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.018688" />
+      <inertia
+        ixx="1.0293E-05"
+        ixy="8.5442E-08"
+        ixz="-6.5039E-08"
+        iyy="1.0301E-05"
+        iyz="6.5245E-08"
+        izz="9.1191E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/0CenterBody.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/0CenterBody.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="0XJoint"
+    type="continuous">
+    <origin
+      xyz="-0.0218 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="0XBody" />
+    <child
+      link="0CenterBody" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="0YBody">
+    <inertial>
+      <origin
+        xyz="-0.020284 -0.0019165 1.5445E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.069744" />
+      <inertia
+        ixx="8.6964E-05"
+        ixy="-2.3313E-05"
+        ixz="-2.5395E-11"
+        iyy="8.68E-05"
+        iyz="3.6916E-12"
+        izz="8.7186E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/0YBody.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/0YBody.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="0Yjoint"
+    type="continuous">
+    <origin
+      xyz="0 0.0218 0"
+      rpy="0 0 0" />
+    <parent
+      link="0CenterBody" />
+    <child
+      link="0YBody" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+</robot>

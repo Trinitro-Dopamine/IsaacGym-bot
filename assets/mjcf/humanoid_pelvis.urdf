@@ -1,0 +1,22 @@
+<?xml version="0.0" ?>
+<robot name="humanoid">
+	<link name="pelvis">
+		<inertial>
+			<origin rpy="0.00000 -0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+			<mass value="4.49038"/>
+			<inertia ixx="0.04469" ixy="0" ixz="0" iyy="0.04469" iyz="0" izz="0.02425"/>
+		</inertial>
+		<collision>
+			<origin rpy="0.00000 -0.00000 0.00000" xyz="0.00000 0.00000 0.07000"/>
+			<geometry>
+				<sphere radius="0.09000"/>
+			</geometry>
+		</collision>
+		<collision>
+			<origin rpy="0.00000 -0.00000 0.00000" xyz="0.00000 0.00000 0.20500"/>
+			<geometry>
+				<sphere radius="0.07000"/>
+			</geometry>
+		</collision>
+	</link>
+</robot>

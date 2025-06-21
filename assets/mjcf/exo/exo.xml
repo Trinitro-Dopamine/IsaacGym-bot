@@ -1,0 +1,259 @@
+<mujoco model="all18.sldasm">
+  <option timestep="0.002" collision="predefined">
+    <!-- <flag energy="enable"></flag> -->
+  </option>
+  <asset>
+    <mesh name="base_link" file="base_link.STL" />
+    <mesh name="base" file="base.obj" />
+    <mesh name="up" file="up.STL" />
+    <mesh name="hl0" file="hl0.STL" />
+    <mesh name="LGL2" file="LGL2.STL" />
+    <mesh name="LGL3" file="LGL3.STL" />
+    <mesh name="LGL4" file="LGL4.STL" />
+    <mesh name="Q" file="Q.STL" />
+    <mesh name="hl1" file="hl1.STL" />
+    <mesh name="kl" file="kl.STL" />
+    <mesh name="LGL5" file="LGL5.STL" />
+    <mesh name="W" file="W.STL" />
+    <mesh name="hr0" file="hr0.STL" />
+    <mesh name="LGR2" file="LGR2.STL" />
+    <mesh name="LGR3" file="LGR3.STL" />
+    <mesh name="LGR4" file="LGR4.STL" />
+    <mesh name="QQ" file="QQ.STL" />
+    <mesh name="hr1" file="hr1.STL" />
+    <mesh name="kr" file="kr.STL" />
+    <mesh name="LGR5" file="LGR5.STL" />
+    <mesh name="WW" file="WW.STL" />
+    <mesh name="raz" file="raz.STL" />
+    <mesh name="rax" file="rax.STL" />
+    <mesh name="ray" file="ray.STL" />
+    <mesh name="laz" file="laz.STL" />
+    <mesh name="lax" file="lax.STL" />
+    <mesh name="lay" file="lay.STL" />
+  </asset>
+  <default>
+    <joint type="hinge" damping="0.01" />
+    <default class="collision">
+      <geom contype="1" conaffinity="0" group="4" type="mesh"></geom>
+    </default>
+    <default class="visual">
+      <geom contype="0" conaffinity="0" group="1" type="mesh"></geom>
+    </default>
+  </default>
+  <worldbody>
+    <!-- <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="base_link"/> -->
+    <body name="base" pos="0 0 0" gravcomp="0">
+      <inertial pos="-0.0191214 0.0210001 -0.0564413" quat="0.706859 0.706859 0.018704 -0.0187052"
+        mass="0.497818" diaginertia="0.00183525 0.00171932 0.000327236" />
+      <!-- <joint name="jbase" pos="0 0 0" axis="0 1 0"/> -->
+      <!-- <joint name="jbase" type='free' pos="0 0 0" /> -->
+      <!-- <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="base"  group="1" /> -->
+      <geom mesh="base" class="collision" />
+      <geom mesh="base" class="visual" />
+      <body name="up" pos="0 0 0" euler="0 -0.22 0">
+        <inertial pos="-0.00035897 0.0210177 0.143822"
+          quat="0.999704 -7.96464e-05 0.0243168 1.08247e-05" mass="0.145045"
+          diaginertia="0.00183753 0.00111126 0.000748422" />
+        <joint name="jup" pos="0 0 0" axis="0 1 0" />
+        <geom mesh="up" class="collision" />
+        <geom mesh="up" class="visual" />
+      </body>
+      <body name="hl0" pos="0.012 0.126 -0.01" euler="-0.03 0 0">
+        <inertial pos="-0.012444 0.063033 0.00126114" quat="0.560292 0.440313 -0.576695 0.399525"
+          mass="0.0345606" diaginertia="5.2573e-05 4.37521e-05 9.90277e-06" />
+        <joint name="jhl0" pos="0 0 0" axis="-1 0 0" />
+        <geom mesh="hl0" class="collision" />
+        <geom mesh="hl0" class="visual" />
+        <body name="LGL2" pos="0.02 0.095 0" gravcomp="0">
+          <inertial pos="0.0303402 -0.000238949 -0.0921191"
+            quat="0.280293 0.648919 0.649583 0.279966" mass="0.0480025"
+            diaginertia="0.000234606 0.000220261 1.52724e-05" />
+          <joint name="JLGL2" pos="0 0 0" axis="1 0 0" />
+          <geom mesh="LGL2" class="collision" />
+          <geom mesh="LGL2" class="visual" />
+          <body name="LGL5" pos="-0.0075 0 -0.05" gravcomp="0">
+            <inertial pos="-0.0295043 -0.0463055 5.21064e-05"
+              quat="0.559387 0.433097 -0.558973 0.432508" mass="0.0149926"
+              diaginertia="1.34138e-05 1.31585e-05 6.06448e-07" />
+            <joint name="JLGL5" pos="0 0 0" axis="1 0 0" />
+            <geom mesh="LGL5" class="collision" />
+            <geom mesh="LGL5" class="visual" />
+            <site name="LGL5_site" pos="-0.021 -0.095 0" size="0.01" rgba='1 0 0 1' type="sphere" />
+            <!-- <body name="W" pos="-0.021 -0.095 0" gravcomp="0">
+              <inertial pos="0.0258792 -0.0980316 0.0135344" mass="0.000523599" diaginertia="5.23599e-09
+            5.23599e-09 5.23599e-09"/>
+              <joint name="JW" pos="0 0 0" axis="1 0 0"/>
+              <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="W"/>
+            </body> -->
+          </body>
+          <body name="LGL3" pos="0.1185 0 -0.17" gravcomp="0">
+            <inertial pos="-0.0259705 -0.000999385 -0.0433604"
+              quat="0.705746 -0.0482553 0.0476736 0.70521" mass="0.044045"
+              diaginertia="0.000102947 7.38603e-05 4.04722e-05" />
+            <joint name="JLGL3" pos="0 0 0" axis="-1 0 0" />
+            <geom mesh="LGL3" class="collision" />
+            <geom mesh="LGL3" class="visual" />
+            <body name="LGL4" pos="-0.0125 0.0281908 0.0102606" gravcomp="0">
+              <inertial pos="-0.0815102 0.000909987 0.0773021"
+                quat="0.665864 -0.254449 -0.258558 0.651942" mass="0.0247761"
+                diaginertia="0.000105895 0.0001026 3.86818e-06" />
+              <joint name="JLGL4" pos="0 0 0" axis="1 0 0" />
+              <geom mesh="LGL4" class="collision" />
+              <geom mesh="LGL4" class="visual" />
+              <site name="LGL4_site" pos="-0.116 0 0.17" size="0.01" rgba='1 0 0 1' type="sphere" />
+              <!-- <body name="Q" pos="-0.116 0 0.17" gravcomp="0">
+                <inertial pos="0.00737925 -0.221222 -0.0467261" mass="0.000523599" diaginertia="5.23599e-09
+              5.23599e-09 5.23599e-09"/>
+                <joint name="JQ" pos="0 0 0" axis="1 0 0"/>
+                <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Q"/>
+              </body> -->
+            </body>
+            <!-- <body name="hl1" pos="0.13 -0.034758 -0.24165" > -->
+            <body name="hl1" pos="-0.026 0.00514093 -0.0617913">
+              <inertial pos="0.0133499 -0.0238046 -0.172665"
+                quat="0.787918 0.063466 0.0788592 0.607403" mass="1.01104"
+                diaginertia="0.00178546 0.00145433 0.000903882" />
+              <joint name="jhl1" pos="0 0 0" axis="0 1 0" />
+              <geom mesh="hl1" class="collision" />
+              <geom mesh="hl1" class="visual" />
+              <site name="hl1_site" pos="0 0 -0.2" size="0.02" type="sphere" />
+              <body name="kl" pos="-0.0055966 -0.015593 -0.46607" euler="0 -0 0">
+                <inertial pos="0.0112091 -0.0406631 -0.0980587"
+                  quat="0.961281 -0.248786 0.0677521 0.0972343" mass="0.0787945"
+                  diaginertia="0.00027592 0.000239557 5.37921e-05" />
+                <joint name="jkl" pos="0.0 0 0.05" axis="0 1 0" />
+                <geom mesh="kl" class="collision" />
+                <geom mesh="kl" class="visual" />
+                <site name="kl_site" pos="0 0 -0.2" size="0.02" type="sphere" />
+                <body name="laz" pos="0.028344 -0.062453 -0.15432">
+                  <inertial pos="-0.0159471 -5.8735e-08 -0.0816899"
+                    quat="0.700738 0.0947815 0.0947828 0.700713" mass="0.0174661"
+                    diaginertia="1.14185e-05 1.07297e-05 1.00437e-06" />
+                  <joint name="jlaz" pos="0 0 0" axis="-0.24604 0 -0.96926" />
+                  <geom mesh="laz" class="collision" />
+                  <geom mesh="laz" class="visual" />
+                  <body name="lax" pos="-0.01651 0 -0.13922" euler="0.03 0 0">
+                    <inertial pos="-0.0460072 1.97557e-06 -0.018113"
+                      quat="0.349787 0.34953 -0.61483 0.614379" mass="0.0115617"
+                      diaginertia="3.45823e-05 2.06226e-05 1.40741e-05" />
+                    <joint name="jlax" pos="0 0 0" axis="-0.96926 0 0.24604" />
+                    <geom mesh="lax" class="collision" />
+                    <geom mesh="lax" class="visual" />
+                    <body name="lay" pos="-0.095972 0.061 -0.047846" euler="0 0 0">
+                      <inertial pos="-1.9578e-11 -0.061 -0.074052" quat="0.999999 0 0 0.00166103"
+                        mass="0.0229172" diaginertia="2.50578e-05 2.28673e-05 6.9516e-06" />
+                      <joint name="jlay" pos="0 0 0" axis="0 1 0" />
+                      <geom mesh="lay" class="collision" />
+                      <geom mesh="lay" class="visual" />
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="hr0" pos="0.012 -0.084 -0.01" euler="0.03 0 0">
+        <inertial pos="-0.012444 -0.063033 0.00126113" quat="0.440313 0.560292 -0.399526 0.576695"
+          mass="0.0345607" diaginertia="5.2573e-05 4.3752e-05 9.90276e-06" />
+        <joint name="jhr0" pos="0 0 0" axis="-1 0 0" />
+        <geom mesh="hr0" class="collision" />
+        <geom mesh="hr0" class="visual" />
+        <body name="LGR2" pos="0.02 -0.095 0" gravcomp="0">
+          <inertial pos="0.0303403 0.000238954 -0.0921191" quat="0.279966 0.649583 0.64892 0.280293"
+            mass="0.0480026" diaginertia="0.000234606 0.000220261 1.52724e-05" />
+          <joint name="JLGR2" pos="0 0 0" axis="1 0 0" />
+          <geom mesh="LGR2" class="collision" />
+          <geom mesh="LGR2" class="visual" />
+          <body name="LGR5" pos="-0.0075 0 -0.05" gravcomp="0">
+            <inertial pos="-0.0295043 0.0463055 -5.20609e-05"
+              quat="0.432507 0.558973 -0.433097 0.559387" mass="0.0149926"
+              diaginertia="1.34138e-05 1.31585e-05 6.06448e-07" />
+            <joint name="JLGR5" pos="0 0 0" axis="1 0 0" />
+            <geom mesh="LGR5" class="collision" />
+            <geom mesh="LGR5" class="visual" />
+            <site name="LGR5_site" pos="-0.021 0.095 0" size="0.01" rgba='1 0 0 1' type="sphere" />
+            <!-- <body name="WW" pos="-0.0025 -0.0281908 0.0602606" gravcomp="0">
+              <inertial pos="0.0783125 0.228931 -0.341303" quat="0.995358 0.00250728 -0.0962067 0.00025821"
+            mass="3.24601" diaginertia="0.343418 0.260174 0.0984932"/>
+              <joint name="JWW" pos="0 0 0" axis="1 0 0"/>
+              <geom type="mesh" rgba="1 1 1 1" mesh="WW"/>
+            </body> -->
+          </body>
+          <body name="LGR3" pos="0.1185 0 -0.17" gravcomp="0">
+            <inertial pos="-0.0260295 0.000999385 -0.0433604"
+              quat="0.705746 0.0482553 -0.0476736 0.70521" mass="0.044045"
+              diaginertia="0.000102947 7.38603e-05 4.04722e-05" />
+            <joint name="JLGR3" pos="0 0 0" axis="-1 0 0" />
+            <geom mesh="LGR3" class="collision" />
+            <geom mesh="LGR3" class="visual" />
+            <body name="LGR4" pos="-0.0125 -0.0281908 0.0102606" gravcomp="0">
+              <inertial pos="-0.0815099 -0.000909987 0.077302"
+                quat="0.651942 -0.258558 -0.254449 0.665864" mass="0.0247759"
+                diaginertia="0.000105894 0.0001026 3.86815e-06" />
+              <joint name="JLGR4" pos="0 0 0" axis="1 0 0" />
+              <geom mesh="LGR4" class="collision" />
+              <geom mesh="LGR4" class="visual" />
+              <site name="LGR4_site" pos="-0.116 0 0.17" size="0.01" rgba='1 0 0 1' type="sphere" />
+              <!-- <body name="QQ" pos="-0.1345 0.1232 0.109739" gravcomp="0">
+                <inertial pos="0.0258792 0.111968 0.0135344" mass="0.000523599" diaginertia="5.23599e-09
+              5.23599e-09 5.23599e-09"/>
+                <joint name="JQQ" pos="0 0 0" axis="1 0 0"/>
+                <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="QQ"/>
+              </body> -->
+            </body>
+            <body name="hr1" pos="-0.026 -0.00514093 -0.0617913">
+              <inertial pos="0.0130834 0.0237236 -0.172316"
+                quat="0.607099 0.0833733 0.0663533 0.787449" mass="1.0083"
+                diaginertia="0.00178463 0.0014557 0.000901962" />
+              <joint name="jhr1" pos="0 0 0" axis="0 -1 0" />
+              <geom mesh="hr1" class="collision" />
+              <geom mesh="hr1" class="visual" />
+              <body name="kr" pos="-0.0095578 0.016093 -0.46613" euler="0 -0.22 0">
+                <inertial pos="0.00503437 0.0459504 -0.114047"
+                  quat="0.957319 0.249459 0.0977416 -0.108429" mass="0.0678212"
+                  diaginertia="0.000272102 0.000235178 5.15354e-05" />
+                <joint name="jkr" pos="0.0 0 0.05" axis="0 -1 0" />
+                <geom mesh="kr" class="collision" />
+                <geom mesh="kr" class="visual" />
+                <body name="raz" pos="0.019464 0.061131 -0.15562">
+                  <inertial pos="-0.0205114 -6.07983e-08 -0.080665"
+                    quat="0.697798 0.114435 0.114437 0.697773" mass="0.0174661"
+                    diaginertia="1.14185e-05 1.07297e-05 1.00438e-06" />
+                  <joint name="jraz" pos="0 0 0" axis="-0.300099 0 -0.953908" />
+                  <geom mesh="raz" class="collision" />
+                  <geom mesh="raz" class="visual" />
+                  <body name="rax" pos="-0.024306 0 -0.13807" euler="-0.03 0 0">
+                    <inertial pos="-0.0469521 1.9407e-06 -0.0154996"
+                      quat="0.366926 0.366658 -0.604757 0.604315" mass="0.0115617"
+                      diaginertia="3.45823e-05 2.06226e-05 1.40742e-05" />
+                    <joint name="jrax" pos="0 0 0" axis="-0.953908 0 0.300099" />
+                    <geom mesh="rax" class="collision" />
+                    <geom mesh="rax" class="visual" />
+                    <body name="ray" pos="-0.098508 -0.049 -0.042378" euler="0 0.22 0">
+                      <inertial pos="-1.91098e-11 0.049 -0.074052" quat="0.999999 0 0 0.00166103"
+                        mass="0.0229172" diaginertia="2.50578e-05 2.28673e-05 6.9516e-06" />
+                      <joint name="jray" pos="0 0 0" axis="0 1 0" />
+                      <geom mesh="ray" class="collision" />
+                      <geom mesh="ray" class="visual" />
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <equality>
+    <!-- <weld body1="base" body2="W" solref='0.001 1'  ></weld> -->
+    <connect body1="LGL5" body2="base" solref='0.005 1' anchor='-0.021 -0.095 0 '></connect>
+    <connect body1="LGL4" body2="hl0" solref='0.005 1' anchor='-0.116 0 0.17 '></connect>
+    <!-- <weld body1="hl0" body2="Q" solref='0.001 1'  ></weld> -->
+    <!-- <weld body1="base" body2="WW" solref='0.005 1'  ></weld> -->
+    <!-- <weld body1="hr0" body2="QQ" solref='0.005 1'  ></weld> -->
+    <connect body1="LGR5" body2="base" solref='0.005 1' anchor='-0.021 0.095 0'></connect>
+    <connect body1="LGR4" body2="hr0" solref='0.005 1' anchor='-0.116 0 0.17'></connect>
+  </equality>
+</mujoco>

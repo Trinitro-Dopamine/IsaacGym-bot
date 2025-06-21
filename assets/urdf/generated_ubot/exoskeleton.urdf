@@ -1,0 +1,829 @@
+<robot
+	name="exoskeleton">
+  <link
+    name="Body0X">
+    <inertial>
+      <origin
+        xyz="-0.0019165 -0.020284 -1.5446E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="8.68E-05"
+        ixy="-2.3313E-05"
+        ixz="-3.6916E-12"
+        iyy="8.6964E-05"
+        iyz="2.5395E-11"
+        izz="8.7186E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyX.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyXSimple.dae" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="Body0Center">
+    <inertial>
+      <origin
+        xyz="-0.0022809 -0.0021962 1.0803E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.05" />
+      <inertia
+        ixx="1.0293E-05"
+        ixy="8.5442E-08"
+        ixz="-6.5039E-08"
+        iyy="1.0301E-05"
+        iyz="6.5245E-08"
+        izz="9.1191E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyCenter.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyCenterSimple.dae" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="Body0Y">
+    <inertial>
+      <origin
+        xyz="-0.020284 -0.0019165 1.5445E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="8.6964E-05"
+        ixy="-2.3313E-05"
+        ixz="-2.5395E-11"
+        iyy="8.68E-05"
+        iyz="3.6916E-12"
+        izz="8.7186E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyY.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyYSimple.dae" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="joint0Y"
+    type="revolute">
+    <limit effort="1.8" lower="-1.507" upper="1.507" velocity="3.14"/>
+    <origin
+      xyz="0 -0.0218 0"
+      rpy="0 0 0" />
+    <parent
+      link="Body0Y" />
+    <child
+      link="Body0Center" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+
+  <joint
+    name="Joint0X"
+    type="revolute">
+    <limit effort="1.8" lower="-1.507" upper="1.507" velocity="3.14"/>
+    <origin
+      xyz="0.0218 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Body0Center" />
+    <child
+      link="Body0X" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+
+
+  <link
+    name="Body1X">
+    <inertial>
+      <origin
+        xyz="-0.0019165 -0.020284 -1.5446E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="8.68E-05"
+        ixy="-2.3313E-05"
+        ixz="-3.6916E-12"
+        iyy="8.6964E-05"
+        iyz="2.5395E-11"
+        izz="8.7186E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyX.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyXSimple.dae" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="Body1Center">
+    <inertial>
+      <origin
+        xyz="-0.0022809 -0.0021962 1.0803E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.05" />
+      <inertia
+        ixx="1.0293E-05"
+        ixy="8.5442E-08"
+        ixz="-6.5039E-08"
+        iyy="1.0301E-05"
+        iyz="6.5245E-08"
+        izz="9.1191E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyCenter.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyCenterSimple.dae" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="Body1Y">
+    <inertial>
+      <origin
+        xyz="-0.020284 -0.0019165 1.5445E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="8.6964E-05"
+        ixy="-2.3313E-05"
+        ixz="-2.5395E-11"
+        iyy="8.68E-05"
+        iyz="3.6916E-12"
+        izz="8.7186E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyY.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyYSimple.dae" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="joint1Y"
+    type="revolute">
+    <limit effort="1.8" lower="-1.507" upper="1.507" velocity="3.14"/>
+    <origin
+      xyz="0 -0.0218 0"
+      rpy="0 0 0" />
+    <parent
+      link="Body1Y" />
+    <child
+      link="Body1Center" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+
+  <joint
+    name="Joint1X"
+    type="revolute">
+    <limit effort="1.8" lower="-1.507" upper="1.507" velocity="3.14"/>
+    <origin
+      xyz="0.0218 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Body1Center" />
+    <child
+      link="Body1X" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+
+
+  <joint
+    name="Joint0to1"
+    type="fixed">
+    <origin
+      xyz="0.0698 0.0218 0.0"
+      rpy="0.0 -0.0 0.0" />
+    <parent
+      link="Body0X" />
+    <child
+      link="Body1Y" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <link
+    name="Body2X">
+    <inertial>
+      <origin
+        xyz="-0.0019165 -0.020284 -1.5446E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="8.68E-05"
+        ixy="-2.3313E-05"
+        ixz="-3.6916E-12"
+        iyy="8.6964E-05"
+        iyz="2.5395E-11"
+        izz="8.7186E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyX.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyXSimple.dae" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="Body2Center">
+    <inertial>
+      <origin
+        xyz="-0.0022809 -0.0021962 1.0803E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.05" />
+      <inertia
+        ixx="1.0293E-05"
+        ixy="8.5442E-08"
+        ixz="-6.5039E-08"
+        iyy="1.0301E-05"
+        iyz="6.5245E-08"
+        izz="9.1191E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyCenter.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyCenterSimple.dae" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="Body2Y">
+    <inertial>
+      <origin
+        xyz="-0.020284 -0.0019165 1.5445E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="8.6964E-05"
+        ixy="-2.3313E-05"
+        ixz="-2.5395E-11"
+        iyy="8.68E-05"
+        iyz="3.6916E-12"
+        izz="8.7186E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyY.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyYSimple.dae" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="joint2Y"
+    type="revolute">
+    <limit effort="1.8" lower="-1.507" upper="1.507" velocity="3.14"/>
+    <origin
+      xyz="0 -0.0218 0"
+      rpy="0 0 0" />
+    <parent
+      link="Body2Y" />
+    <child
+      link="Body2Center" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+
+  <joint
+    name="Joint2X"
+    type="revolute">
+    <limit effort="1.8" lower="-1.507" upper="1.507" velocity="3.14"/>
+    <origin
+      xyz="0.0218 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Body2Center" />
+    <child
+      link="Body2X" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+
+
+  <joint
+    name="Joint1to2"
+    type="fixed">
+    <origin
+      xyz="0.0698 0.0218 0.0"
+      rpy="0.0 -0.0 0.0" />
+    <parent
+      link="Body1X" />
+    <child
+      link="Body2Y" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <link
+    name="Body3X">
+    <inertial>
+      <origin
+        xyz="-0.0019165 -0.020284 -1.5446E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="8.68E-05"
+        ixy="-2.3313E-05"
+        ixz="-3.6916E-12"
+        iyy="8.6964E-05"
+        iyz="2.5395E-11"
+        izz="8.7186E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyX.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyXSimple.dae" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="Body3Center">
+    <inertial>
+      <origin
+        xyz="-0.0022809 -0.0021962 1.0803E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.05" />
+      <inertia
+        ixx="1.0293E-05"
+        ixy="8.5442E-08"
+        ixz="-6.5039E-08"
+        iyy="1.0301E-05"
+        iyz="6.5245E-08"
+        izz="9.1191E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyCenter.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyCenterSimple.dae" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="Body3Y">
+    <inertial>
+      <origin
+        xyz="-0.020284 -0.0019165 1.5445E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="8.6964E-05"
+        ixy="-2.3313E-05"
+        ixz="-2.5395E-11"
+        iyy="8.68E-05"
+        iyz="3.6916E-12"
+        izz="8.7186E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyY.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyYSimple.dae" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="joint3Y"
+    type="revolute">
+    <limit effort="1.8" lower="-1.507" upper="1.507" velocity="3.14"/>
+    <origin
+      xyz="0 -0.0218 0"
+      rpy="0 0 0" />
+    <parent
+      link="Body3Y" />
+    <child
+      link="Body3Center" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+
+  <joint
+    name="Joint3X"
+    type="revolute">
+    <limit effort="1.8" lower="-1.507" upper="1.507" velocity="3.14"/>
+    <origin
+      xyz="0.0218 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Body3Center" />
+    <child
+      link="Body3X" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+
+
+  <joint
+    name="Joint2to3"
+    type="fixed">
+    <origin
+      xyz="0.0698 0.0218 0.0"
+      rpy="0.0 -0.0 0.0" />
+    <parent
+      link="Body2X" />
+    <child
+      link="Body3Y" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <link
+    name="Body4X">
+    <inertial>
+      <origin
+        xyz="-0.0019165 -0.020284 -1.5446E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="8.68E-05"
+        ixy="-2.3313E-05"
+        ixz="-3.6916E-12"
+        iyy="8.6964E-05"
+        iyz="2.5395E-11"
+        izz="8.7186E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyX.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyXSimple.dae" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="Body4Center">
+    <inertial>
+      <origin
+        xyz="-0.0022809 -0.0021962 1.0803E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.05" />
+      <inertia
+        ixx="1.0293E-05"
+        ixy="8.5442E-08"
+        ixz="-6.5039E-08"
+        iyy="1.0301E-05"
+        iyz="6.5245E-08"
+        izz="9.1191E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyCenter.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyCenterSimple.dae" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="Body4Y">
+    <inertial>
+      <origin
+        xyz="-0.020284 -0.0019165 1.5445E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="8.6964E-05"
+        ixy="-2.3313E-05"
+        ixz="-2.5395E-11"
+        iyy="8.68E-05"
+        iyz="3.6916E-12"
+        izz="8.7186E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyY.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/BodyYSimple.dae" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="joint4Y"
+    type="revolute">
+    <limit effort="1.8" lower="-1.507" upper="1.507" velocity="3.14"/>
+    <origin
+      xyz="0 -0.0218 0"
+      rpy="0 0 0" />
+    <parent
+      link="Body4Y" />
+    <child
+      link="Body4Center" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+
+  <joint
+    name="Joint4X"
+    type="revolute">
+    <limit effort="1.8" lower="-1.507" upper="1.507" velocity="3.14"/>
+    <origin
+      xyz="0.0218 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Body4Center" />
+    <child
+      link="Body4X" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+
+
+  <joint
+    name="Joint3to4"
+    type="fixed">
+    <origin
+      xyz="0.0698 0.0218 0.0"
+      rpy="0.0 -0.0 0.0" />
+    <parent
+      link="Body3X" />
+    <child
+      link="Body4Y" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+</robot>

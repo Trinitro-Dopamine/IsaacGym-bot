@@ -1,0 +1,21 @@
+1.single structure
+    1.1 reward function (M)
+    1.2 observation function (M)
+    1.3 reset function (M)
+    1.4 network design (M)
+2.library
+    2.1 layer map (done)
+    2.2 A* search (done)
+    3.3 tree cut (done)
+
+3.accuire root position and rotation
+    3.1 SLAM and UWB
+    3.2 deep sense camera: libreasense
+
+4.sim to real
+    4.1 translate parameters
+    4.2 fine tune IRL
+
+5.robustness on different env
+    5.1 self-adjusting parameters
+    5.2 auto-fill yaml file

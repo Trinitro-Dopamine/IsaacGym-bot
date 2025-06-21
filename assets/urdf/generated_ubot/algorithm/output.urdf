@@ -1,0 +1,542 @@
+  <link
+    name="0base_link">
+    <inertial>
+      <origin
+        xyz="0.0021962 -0.0022809 1.0803E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.018688" />
+      <inertia
+        ixx="1.0301E-05"
+        ixy="-8.5442E-08"
+        ixz="-6.5245E-08"
+        iyy="1.0293E-05"
+        iyz="-6.5039E-08"
+        izz="9.1191E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="0L_Link">
+    <inertial>
+      <origin
+        xyz="0.00041649 0.020284 -1.5446E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.069744" />
+      <inertia
+        ixx="8.68E-05"
+        ixy="-2.3313E-05"
+        ixz="3.6916E-12"
+        iyy="8.6964E-05"
+        iyz="-2.5395E-11"
+        izz="8.7186E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/L_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/L_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="0R_Link">
+    <inertial>
+      <origin
+        xyz="0.00041649 -1.5445E-08 -0.020284"
+        rpy="0 0 0" />
+      <mass
+        value="0.069744" />
+      <inertia
+        ixx="8.68E-05"
+        ixy="3.6916E-12"
+        ixz="2.3313E-05"
+        iyy="8.7186E-05"
+        iyz="2.5395E-11"
+        izz="8.6964E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/R_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/R_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+  <link
+    name="1base_link">
+    <inertial>
+      <origin
+        xyz="0.0021962 -0.0022809 1.0803E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.018688" />
+      <inertia
+        ixx="1.0301E-05"
+        ixy="-8.5442E-08"
+        ixz="-6.5245E-08"
+        iyy="1.0293E-05"
+        iyz="-6.5039E-08"
+        izz="9.1191E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="1L_Link">
+    <inertial>
+      <origin
+        xyz="0.00041649 0.020284 -1.5446E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.069744" />
+      <inertia
+        ixx="8.68E-05"
+        ixy="-2.3313E-05"
+        ixz="3.6916E-12"
+        iyy="8.6964E-05"
+        iyz="-2.5395E-11"
+        izz="8.7186E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/L_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/L_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="1R_Link">
+    <inertial>
+      <origin
+        xyz="0.00041649 -1.5445E-08 -0.020284"
+        rpy="0 0 0" />
+      <mass
+        value="0.069744" />
+      <inertia
+        ixx="8.68E-05"
+        ixy="3.6916E-12"
+        ixz="2.3313E-05"
+        iyy="8.7186E-05"
+        iyz="2.5395E-11"
+        izz="8.6964E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/R_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/R_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+  <link
+    name="2base_link">
+    <inertial>
+      <origin
+        xyz="0.0021962 -0.0022809 1.0803E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.018688" />
+      <inertia
+        ixx="1.0301E-05"
+        ixy="-8.5442E-08"
+        ixz="-6.5245E-08"
+        iyy="1.0293E-05"
+        iyz="-6.5039E-08"
+        izz="9.1191E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="2L_Link">
+    <inertial>
+      <origin
+        xyz="0.00041649 0.020284 -1.5446E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.069744" />
+      <inertia
+        ixx="8.68E-05"
+        ixy="-2.3313E-05"
+        ixz="3.6916E-12"
+        iyy="8.6964E-05"
+        iyz="-2.5395E-11"
+        izz="8.7186E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/L_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/L_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="2R_Link">
+    <inertial>
+      <origin
+        xyz="0.00041649 -1.5445E-08 -0.020284"
+        rpy="0 0 0" />
+      <mass
+        value="0.069744" />
+      <inertia
+        ixx="8.68E-05"
+        ixy="3.6916E-12"
+        ixz="2.3313E-05"
+        iyy="8.7186E-05"
+        iyz="2.5395E-11"
+        izz="8.6964E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/R_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/R_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+  <link
+    name="3base_link">
+    <inertial>
+      <origin
+        xyz="0.0021962 -0.0022809 1.0803E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.018688" />
+      <inertia
+        ixx="1.0301E-05"
+        ixy="-8.5442E-08"
+        ixz="-6.5245E-08"
+        iyy="1.0293E-05"
+        iyz="-6.5039E-08"
+        izz="9.1191E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="3L_Link">
+    <inertial>
+      <origin
+        xyz="0.00041649 0.020284 -1.5446E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.069744" />
+      <inertia
+        ixx="8.68E-05"
+        ixy="-2.3313E-05"
+        ixz="3.6916E-12"
+        iyy="8.6964E-05"
+        iyz="-2.5395E-11"
+        izz="8.7186E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/L_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/L_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="3R_Link">
+    <inertial>
+      <origin
+        xyz="0.00041649 -1.5445E-08 -0.020284"
+        rpy="0 0 0" />
+      <mass
+        value="0.069744" />
+      <inertia
+        ixx="8.68E-05"
+        ixy="3.6916E-12"
+        ixz="2.3313E-05"
+        iyy="8.7186E-05"
+        iyz="2.5395E-11"
+        izz="8.6964E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/R_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shell/meshes/R_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+  <joint
+    name="0to1J"
+    type="fixed">
+    <origin
+      xyz="0.203 0.0 -0.0458"
+      rpy="1 1 0.0" />
+    <parent
+      link="0R_Link" />
+    <child
+      link="0to1_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <joint
+    name="1to2J"
+    type="fixed">
+    <origin
+      xyz="0.203 0.203 -0.0458"
+      rpy="0 0 0.203" />
+    <parent
+      link="1R_Link" />
+    <child
+      link="1to2_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <joint
+    name="0to3J"
+    type="fixed">
+    <origin
+      xyz="0.0 0.0 -0.0"
+      rpy="1 0 0.0" />
+    <parent
+      link="0R_Link" />
+    <child
+      link="0to3_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+

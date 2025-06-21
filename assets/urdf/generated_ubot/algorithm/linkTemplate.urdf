@@ -1,0 +1,174 @@
+  <link
+    name="%sXBody">
+    <inertial>
+      <origin
+        xyz="-0.0019165 -0.020284 -1.5446E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.069744" />
+      <inertia
+        ixx="8.68E-05"
+        ixy="-2.3313E-05"
+        ixz="-3.6916E-12"
+        iyy="8.6964E-05"
+        iyz="2.5395E-11"
+        izz="8.7186E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+<<<<<<< HEAD
+          filename="package://generated_ubot/meshes/0XBody.STL" />
+=======
+          filename="./meshes/0XBody.dae" />
+>>>>>>> 2a94eb4 (init)
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+<<<<<<< HEAD
+          filename="package://generated_ubot/meshes/0XBody.STL" />
+=======
+          filename="./meshes/0XBodySimple.dae" />
+>>>>>>> 2a94eb4 (init)
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="%sCenterBody">
+    <inertial>
+      <origin
+        xyz="-0.0022809 -0.0021962 1.0803E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.018688" />
+      <inertia
+        ixx="1.0293E-05"
+        ixy="8.5442E-08"
+        ixz="-6.5039E-08"
+        iyy="1.0301E-05"
+        iyz="6.5245E-08"
+        izz="9.1191E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+<<<<<<< HEAD
+          filename="package://generated_ubot/meshes/0CenterBody.STL" />
+=======
+          filename="./meshes/0CenterBody.dae" />
+>>>>>>> 2a94eb4 (init)
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+<<<<<<< HEAD
+          filename="package://generated_ubot/meshes/0CenterBody.STL" />
+=======
+          filename="./meshes/0CenterBodySimple.dae" />
+>>>>>>> 2a94eb4 (init)
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="%sYBody">
+    <inertial>
+      <origin
+        xyz="-0.020284 -0.0019165 1.5445E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.069744" />
+      <inertia
+        ixx="8.6964E-05"
+        ixy="-2.3313E-05"
+        ixz="-2.5395E-11"
+        iyy="8.68E-05"
+        iyz="3.6916E-12"
+        izz="8.7186E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+<<<<<<< HEAD
+          filename="package://generated_ubot/meshes/0YBody.STL" />
+=======
+          filename="./meshes/0YBody.dae" />
+>>>>>>> 2a94eb4 (init)
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+<<<<<<< HEAD
+          filename="package://generated_ubot/meshes/0YBody.STL" />
+=======
+          filename="./meshes/0YBodySimple.dae" />
+>>>>>>> 2a94eb4 (init)
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="%sYjoint"
+    type="continuous">
+    <origin
+      xyz="0 0.0218 0"
+      rpy="0 0 0" />
+    <parent
+      link="%sCenterBody" />
+    <child
+      link="%sYBody" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+
+  <joint
+    name="%sXJoint"
+    type="continuous">
+    <origin
+      xyz="-0.0218 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="%sXBody" />
+    <child
+      link="%sCenterBody" />
+    <axis
+      xyz="1 0 0" />
+  </joint>

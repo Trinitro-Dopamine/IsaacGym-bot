@@ -1,0 +1,82 @@
+<mujoco model="zbot">
+	<compiler inertiafromgeom="true" angle="degree"/>
+  	<default>
+		<default class="coliision">
+			<geom contype="1" conaffinity="0" group="4" type="mesh" mesh="mb"></geom>
+			<default class="coliision_a">
+				<geom mesh="ma"></geom>
+			</default>
+
+			<default class="coliision_b">
+				<geom mesh="mb"></geom>
+			</default>
+		</default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0" group="1" type="mesh" mesh="mb"></geom>
+			<default class="visual_a">
+				<geom mesh="ma"></geom>
+			</default>
+
+			<default class="visual_b">
+				<geom mesh="mb"></geom>
+			</default>
+		</default>
+		<joint range="-180 180" limited="true"/>
+	</default>
+
+    <asset>
+		<mesh name="ma" file="ma.obj"/>
+		<mesh name="mb" file="mb.obj"/>
+  	</asset>
+
+
+	<worldbody>
+		<body name="base" pos="0 0 0.05" euler="90 0 0">
+			<freejoint/>
+			<geom class="visual_a" pos="0 0 0"/>
+			<geom class="coliision_a" pos="0 0 0"/>
+			<!-- <geom class="clollision_a" type="cylinder" size="0.050 0.001" pos="0.0 0.0 0.001"/>
+			<geom class="clollision_a" type="cylinder" size="0.050 0.001" pos="0.0 0.0 0.0525" euler="45 0 0"/> -->
+			<body name="body_0" pos="0 0 0.0">
+				<joint name="joint_0" type="hinge"  pos="0 0 0.053" axis="0 -1 1" />
+				<geom class="visual_b" pos="0 0 0"/>
+				<geom class="coliision_b" pos="0 0 0"/>
+				<geom class="visual_a" pos="0 0 0.106" euler="0 0 180"/>
+				<geom class="coliision_a" pos="0 0 0.106" euler="0 0 180"/>
+				<body name="body_1" pos="0 0 0.106" euler="0 0 180">
+					<joint name="joint_1" type="hinge"  pos="0 0 0.053" axis="0 -1 1" />
+					<geom class="visual_b" pos="0 0 0"/>
+					<geom class="coliision_b" pos="0 0 0"/>
+					<geom class="visual_a" pos="0 0 0.106" euler="0 0 180"/>
+					<geom class="coliision_a" pos="0 0 0.106" euler="0 0 180"/>
+					<body name="body_2" pos="0 0 0.106" euler="0 0 180">
+						<joint name="joint_2" type="hinge"  pos="0 0 0.053" axis="0 -1 1" />
+						<geom class="visual_b" pos="0 0 0"/>
+						<geom class="coliision_b" pos="0 0 0"/>
+						<geom class="visual_a" pos="0 0 0.106" euler="0 0 180"/>
+						<geom class="coliision_a" pos="0 0 0.106" euler="0 0 180"/>
+						<body name="body_3" pos="0 0 0.106" euler="0 0 180">
+							<joint name="joint_3" type="hinge"  pos="0 0 0.053" axis="0 -1 1" />
+							<geom class="visual_b" pos="0 0 0"/>
+							<geom class="coliision_b" pos="0 0 0"/>
+							<geom class="visual_a" pos="0 0 0.106" euler="0 0 180"/>
+							<geom class="coliision_a" pos="0 0 0.106" euler="0 0 180"/>
+							<body name="body_4" pos="0 0 0.106" euler="0 0 180">
+								<joint name="joint_4" type="hinge"  pos="0 0 0.053" axis="0 -1 1" />
+								<geom class="visual_b" pos="0 0 0"/>
+								<geom class="coliision_b" pos="0 0 0"/>
+								<geom class="visual_a" pos="0 0 0.106" euler="0 0 180"/>
+								<geom class="coliision_a" pos="0 0 0.106" euler="0 0 180"/>
+								<body name="body_5" pos="0 0 0.106" euler="0 0 180">
+									<joint name="joint_5" type="hinge"  pos="0 0 0.053" axis="0 -1 1" />
+									<geom class="visual_b" pos="0 0 0"/>
+									<geom class="coliision_b" pos="0 0 0"/>
+								</body>
+							</body>
+						</body>
+					</body>
+				</body>
+			</body>
+		</body>
+	</worldbody>
+</mujoco>

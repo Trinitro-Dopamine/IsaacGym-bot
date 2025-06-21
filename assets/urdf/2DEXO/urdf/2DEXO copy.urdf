@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="2DEXO">
+  <link
+    name="baselink">
+    <inertial>
+      <origin
+        xyz="-0.03873 -0.0011896 0.034836"
+        rpy="0 0 0" />
+      <mass
+        value="4.6909" />
+      <inertia
+        ixx="0.011728"
+        ixy="6.0956E-06"
+        ixz="-2.7185E-05"
+        iyy="0.0057606"
+        iyz="-2.1839E-05"
+        izz="0.009448" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://2DEXO/meshes/baselink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://2DEXO/meshes/baselink.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="rjoint"
+    type="revolute">
+    <origin
+      xyz="0.07575 -0.17837 -0.20332"
+      rpy="0 0 0" />
+    <parent
+      link="baselink" />
+    <child
+      link="rlink" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-40"
+      upper="40"
+      effort="5"
+      velocity="2" />
+  </joint>
+
+  <link
+    name="rlink">
+    <inertial>
+      <origin
+        xyz="0.028006 0.038116 -0.19944"
+        rpy="0 0 0" />
+      <mass
+        value="0.59134" />
+      <inertia
+        ixx="0.0011099"
+        ixy="-5.4467E-05"
+        ixz="-0.00014305"
+        iyy="0.0012128"
+        iyz="0.00015193"
+        izz="0.00074586" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://2DEXO/meshes/rlink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://2DEXO/meshes/rlink.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="rjoint"
+    type="revolute">
+    <origin
+      xyz="0.07575 -0.17837 -0.20332"
+      rpy="0 0 0" />
+    <parent
+      link="baselink" />
+    <child
+      link="rlink" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-40"
+      upper="40"
+      effort="5"
+      velocity="2" />
+  </joint>
+  <link
+    name="llink">
+    <inertial>
+      <origin
+        xyz="0.027997 -0.038116 -0.19943"
+        rpy="0 0 0" />
+      <mass
+        value="0.59123" />
+      <inertia
+        ixx="0.0011098"
+        ixy="5.4478E-05"
+        ixz="-0.00014307"
+        iyy="0.0012127"
+        iyz="-0.00015194"
+        izz="0.0007458" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://2DEXO/meshes/llink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://2DEXO/meshes/llink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ljoint"
+    type="revolute">
+    <origin
+      xyz="0.07575 0.17838 -0.20332"
+      rpy="0 0 0" />
+    <parent
+      link="baselink" />
+    <child
+      link="llink" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
